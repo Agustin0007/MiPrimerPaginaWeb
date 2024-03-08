@@ -1,0 +1,206 @@
+html {
+    font-size: 62,5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    font-size: 16px; /*1rem = 10px*/
+    font-family: 'Times New Roman', Times, serif;
+    background-color: bisque;
+    background-image: linear-gradient(to top, #DFE9F3 0%, #ffffff 60%);
+}
+h1 {
+    font-size: 3.8rem;
+}
+h2 {
+    font-size: 2.8rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+h1, h2, h3 {
+    text-align: center;
+}
+.titulo span {
+    font-size: 1.5rem;   
+}
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.boton{
+    background-color: rgb(3, 163, 255);
+    color: white;
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: .5rem;
+    width: 50%;
+    text-align: center;
+    border: none;
+}
+@media (min-width: 768px){
+    .boton{
+        width: auto;
+    }
+}
+.boton:hover {
+    cursor: pointer;
+}
+.nav-bg{
+    background-color: rgb(76, 0, 255);
+}
+.navegacion{
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 768px) {/*Se utiliza para tablets*/
+    .navegacion{
+        flex-direction: row;
+        justify-content: space-between;
+    }   
+}
+.navegacion a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 10px;
+}
+.navegacion a:hover { /*Esto sirve para que el display se pinte cunado el usuario esta en ese lugar*/
+    background-color: gold;
+}
+.Imagen{
+    background-image: url(../Imagenes/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    padding: 20px;
+    position: relative;
+}
+.contenedor-imagen{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .6);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor-imagen h2, p{
+    color: white;
+}
+.Info-Principal{
+    text-align: center;
+    -webkit-box-shadow: 20px 19px 0px -3px rgba(8,8,8,0.82);
+    -moz-box-shadow: 20px 19px 0px -3px rgba(8,8,8,0.82);
+    box-shadow: 20px 19px 0px -3px rgba(8,8,8,0.82);
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: .9rem;
+}
+.servicios, .navegacion, .formulario, .diseño-footer{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+@media (min-width: 768px){
+    .servicios{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        column-gap: 100px;
+    }
+}
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.servicio p{
+    color: black;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+.icono{
+    background-color: rgb(255, 196, 0);
+    width: 100px;
+    height: 100px;
+    padding: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.formulario{
+    background-color: dimgrey;
+    width: min(50rem, 100%);
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+.formulario fieldset{
+    border: none;
+}
+.formulario legend{
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: yellow;
+
+}
+@media (min-width: 768px){
+    .contenedor-campos{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        column-gap: 1rem;
+
+    }
+    .campo:nth-child(3),
+    .campo:nth-child(4) {
+        grid-column: 1 / 3;
+    }
+}
+.campo{
+    margin-bottom: 1rem;
+    text-align: left;
+
+}
+.campo label{
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    display: block;
+}
+.texto{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+}
+.campo textarea{
+    height: 20rem;
+    width: 100%;
+    border-radius: 2rem;
+}
+.diseño-footer p{
+    text-align: center;
+    color: black;
+}
+.diseño-footer{
+    font-size: 1.5rem;
+    padding: 10px;
+    margin: 5px;
+}
